@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>circle</title>
+		<script type="text/javascript" src="script.js"></script>
+		<style>
+			body {
+				background-color: #000000;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			#error {
+				color: #FF0000;
+				font-style: italic;
+			}
+			div.circle { /* draws the nodes */
+				width: 20px;
+				height: 20px;
+				border: 2px solid black;
+				border-radius: 50%;
+			}
+			div#main {
+				height: 500px;
+				width: 500px;
+				position: absolute;
+				left: 30%;
+				border: 1px #555 solid;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>- CIRCLE W/ NODES -</h3>
+		<p id="error"></p>
+		<p>Diameter (px): <input type="text" placeholder="Max: 500" id="d" onkeypress="return isNum(event)"></p>
+		<p># of Nodes: <input type="text" id="n" placeholder="Max: 24" onkeypress="return isNum(event)"></p>
+		<button type="submit" onclick="draw()" id="btn">DRAW</button>
+		<br>
+		<br>
+		<div id="main">
+		<canvas id="circle" width="500" height="500">
+		</canvas>
+		</div>
+	</body>
+</html>
