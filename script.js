@@ -22,8 +22,11 @@ function draw() {
 	else if (d > 500) {
 		setTimeout(function() { document.getElementById("error").innerHTML = " "; }, 2500);
 		document.getElementById("error").innerHTML = "Max diameter is 500";
-
-	} else { // needs method to *dynamically* find angles for nodes
+    }
+    else if (n > 24) {
+        setTimeout(function() { document.getElementById("error").innerHTML = " "; }, 2500);
+        document.getElementById("error").innerHTML = "Max # of nodes is 24";
+	} else { // needs method to *dynamically* find angles for nodes:
              // (n = # of nodes to draw)
              // 360/n = x
              // place nodes every x degrees
