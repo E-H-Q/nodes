@@ -30,7 +30,8 @@ function draw() {
              // (n = # of nodes to draw)
              // 360/n = x
              // place nodes every x degrees
-		var theta = [0,
+		/* original nodes, keeping incase I fuck up:
+        var theta = [0,
 		3 * (Math.PI / 36),
 		15 * (Math.PI / 36),
 		21 * (Math.PI / 36),
@@ -53,7 +54,7 @@ function draw() {
 		3 * (Math.PI / 2),
 		5 * (Math.PI / 3),
 		7 * (Math.PI / 4),
-		11 * (Math.PI / 6)];
+		11 * (Math.PI / 6)]; */
 		btn.innerHTML = "CLEAR";
 		btn.onclick = clr;
 		var cnv = canvas.getContext("2d"); 
@@ -68,9 +69,12 @@ function draw() {
 
 		//nodes
 		var circleArray = [];
+        var theta = [];
 		var main = document.getElementById("main");
 		for (var i = 0; i < n; i++) {
-			var div = document.createElement("div");
+            var x = 360/n;
+            theta[i] = i*(x*(Math.PI / 36)); // sort of works, doesn't seem to play well with multiples of 5
+            var div = document.createElement("div");
 			div.className = "circle";
 			circleArray.push(div);
 			circleArray[i].posx = Math.round(r * (Math.cos(theta[i]))) + "px";
@@ -87,7 +91,7 @@ function draw() {
 function clr() {
 	var canvas = document.getElementById("circle");
 	var elements = document.getElementsByClassName("circle");
-	while(elements.length > 0){
+	while(elements.length > 0) {
 		elements[0].parentNode.removeChild(elements[0]);
 	}
 	canvas.width = canvas.width;
