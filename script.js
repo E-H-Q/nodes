@@ -73,7 +73,17 @@ function draw() {
 		var main = document.getElementById("main");
 		for (var i = 0; i < n; i++) {
             var x = 360/n;
-            theta[i] = i*(x*(Math.PI / 36)); // sort of works, doesn't seem to play well with multiples of 5
+			if (n == 5 || n == 10) { // quick and dirty solution, should be redone later
+				theta[i] = i*(x*(10));
+			}
+			else if (n == 15) {
+				theta[i] = i*(x*(17));
+			}
+			else if (n == 20) {
+				theta[i] = i*(x*(1));
+			} else {
+				theta[i] = i*(x*(Math.PI / 36));
+			}
             var div = document.createElement("div");
 			div.className = "circle";
 			circleArray.push(div);
