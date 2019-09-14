@@ -28,11 +28,16 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body onload="onload()">
 		<h3>- CIRCLE W/ NODES -</h3>
 		<p id="error"></p>
 		<p>Diameter (px): <input type="text" placeholder="Max: 500" id="d" onkeypress="return isNum(event)"></p>
 		<p># of Nodes: <input type="text" id="n" placeholder="Max: 24" onkeypress="return isNum(event)"></p>
+		Display:<br> 
+		<input type="radio" name="type" value="circle" id="default">Circle
+		<input type="radio" name="type" value="lines">Lines
+		<br>
+		<br>
 		<button type="submit" onclick="draw()" id="btn">DRAW</button>
 		<br>
 		<br>
