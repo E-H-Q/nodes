@@ -26,35 +26,10 @@ function draw() {
     else if (n > 24) {
         setTimeout(function() { document.getElementById("error").innerHTML = " "; }, 2500);
         document.getElementById("error").innerHTML = "Max # of nodes is 24";
-	} else { // needs method to *dynamically* find angles for nodes:
+	} else { // method to *dynamically* find angles for nodes:
              // (n = # of nodes to draw)
              // 360/n = x
              // place nodes every x degrees
-		/* original nodes, keeping incase I fuck up:
-        var theta = [0,
-		3 * (Math.PI / 36),
-		15 * (Math.PI / 36),
-		21 * (Math.PI / 36),
-		33 * (Math.PI / 36),
-		39 * (Math.PI / 36),
-		51 * (Math.PI / 36),
-		57 * (Math.PI / 36),
-		69 * (Math.PI / 36),
-		Math.PI / 6,
-		Math.PI / 4,
-		Math.PI / 3,
-		Math.PI / 2,
-		2 * (Math.PI / 3),
-		3 * (Math.PI / 4),
-		5 * (Math.PI / 6),
-		Math.PI,
-		7 * (Math.PI / 6),
-		5 * (Math.PI / 4),
-		4 * (Math.PI / 3),
-		3 * (Math.PI / 2),
-		5 * (Math.PI / 3),
-		7 * (Math.PI / 4),
-		11 * (Math.PI / 6)]; */
 		btn.innerHTML = "CLEAR";
 		btn.onclick = clr;
 		var cnv = canvas.getContext("2d"); 
