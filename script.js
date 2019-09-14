@@ -1,3 +1,7 @@
+function onload() {
+	document.getElementById("default").checked = true;
+}
+
 function isNum(evt) {
 	evt = (evt) ? evt : window.event;
 	var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -15,6 +19,18 @@ function draw() {
 	var d = document.getElementById("d").value;
 	var n = document.getElementById("n").value;
 	btn = document.getElementById("btn");
+	var opts = document.getElementsByName("type");
+	var lines = false;
+	for (var i = 0, length = opts.length; i < length; i++) {
+		if (opts[i].checked) {
+			if (opts[i].value == "circle") {
+				lines = false;
+			}
+			else if (opts[i].value == "lines") {
+				lines = true;
+			}
+		}
+	}
 	if (d == "") {
 		setTimeout(function() { document.getElementById("error").innerHTML = " "; }, 2500);
 		document.getElementById("error").innerHTML = "No diameter given";
@@ -37,10 +53,12 @@ function draw() {
 		var y = canvas.height / 2;
 		var r = d / 2;
 		cnv.beginPath();
-		cnv.arc(x, y, r, 0, 2 * Math.PI, false); // draws the outer circle
 		cnv.lineWidth = 3;
 		cnv.strokeStyle = "#FFFFFF";
-		cnv.stroke();
+		if (lines == false) {
+			cnv.arc(x, y, r, 0, 2 * Math.PI, false); // draws the outer circle
+			cnv.stroke();
+		}
 
 		//nodes
 		var circleArray = [];
@@ -69,6 +87,11 @@ function draw() {
 			circleArray[i].style.top = ((canvas.height / 2.1) - parseInt(circleArray[i].posy.slice(0, -2))) + "px";
 			circleArray[i].style.left = ((canvas.height / 2.1) + parseInt(circleArray[i].posx.slice(0, -2))) + "px";
 			main.appendChild(circleArray[i]);
+			if (lines == true) {
+				cnv.moveTo(250, y);
+				cnv.lineTo((canvas.height / 2) + parseInt(circleArray[i].posx.slice(0, -2)), (canvas.height / 2) - parseInt(circleArray[i].posy.slice(0, -2)));
+				cnv.stroke();
+			}
 		}
 	}
 }
