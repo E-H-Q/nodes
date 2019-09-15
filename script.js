@@ -70,10 +70,10 @@ function draw() {
 				theta[i] = i*(x*(10));
 			}
 			else if (n == 15) {
-				theta[i] = i*(x*(17));
+				theta[i] = i*(x*(31));
 			}
 			else if (n == 20) {
-				theta[i] = i*(x*(1));
+				theta[i] = i*(x*(40));
 			} else {
 				theta[i] = i*(x*(Math.PI / 36));
 			}
