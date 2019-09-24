@@ -66,10 +66,7 @@ function draw() {
 		var main = document.getElementById("main");
 		for (var i = 0; i < n; i++) {
             var x = 360/n;
-			if (n == 5 || n == 10) { // quick and dirty solution, should be redone later
-				theta[i] = i*(x*(115));
-			}
-			else if (n == 15 || n == 20) {
+			if (n % 5 == 0) {
 				theta[i] = i*(x*(115));
 			} else {
 				theta[i] = i*(x*(Math.PI / 36));
