@@ -15,6 +15,7 @@ function isNum(evt) {
 }
 
 function draw() {
+	clr();
 	var canvas = document.getElementById("circle");
 	var d = document.getElementById("d").value;
 	var n = document.getElementById("n").value;
