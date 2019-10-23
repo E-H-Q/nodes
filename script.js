@@ -22,6 +22,9 @@ function draw() {
 	btn = document.getElementById("btn");
 	var opts = document.getElementsByName("type");
 	var lines = false;
+
+	document.getElementById("d_result").innerHTML = d;
+
 	for (var i = 0, length = opts.length; i < length; i++) {
 		if (opts[i].checked) {
 			if (opts[i].value == "circle") {
