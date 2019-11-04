@@ -1,5 +1,6 @@
 function onload() {
 	document.getElementById("default").checked = true;
+	draw();
 }
 
 function isNum(evt) {
