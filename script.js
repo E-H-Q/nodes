@@ -83,6 +83,8 @@ function draw() {
 			circleArray[i].posx = Math.round(r * (Math.cos(theta[i]))) + "px";
 			circleArray[i].posy = Math.round(r * (Math.sin(theta[i]))) + "px";
 			circleArray[i].style.position = "absolute";
+			circleArray[i].style.width = "20px";
+			circleArray[i].style.height = "20px";
 			circleArray[i].style.backgroundColor = "#FFFFFF";
 			circleArray[i].style.top = ((canvas.height / 2.1) - parseInt(circleArray[i].posy.slice(0, -2))) + "px";
 			circleArray[i].style.left = ((canvas.height / 2.1) + parseInt(circleArray[i].posx.slice(0, -2))) + "px";
