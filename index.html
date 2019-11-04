@@ -36,8 +36,8 @@
 		<!-- <p># of Nodes: <input type="text" id="n" placeholder="Max: 24" onkeypress="return isNum(event)"></p> -->
 		<p># of Nodes: <input type="range" min="0" max="24" value="12" class="slider" id="n" onchange="draw()"><span id="n_result"/></p>
 		Display:<br> 
-		<input type="radio" name="type" value="circle" id="default">Circle
-		<input type="radio" name="type" value="lines">Lines
+		<input type="radio" name="type" value="circle" id="default" onchange="draw()">Circle
+		<input type="radio" name="type" value="lines" onchange="draw()">Lines
 		<br>
 		<br>
 		<button type="submit" onclick="draw()" id="btn">DRAW</button>
