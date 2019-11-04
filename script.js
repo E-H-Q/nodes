@@ -24,6 +24,7 @@ function draw() {
 	var lines = false;
 
 	document.getElementById("d_result").innerHTML = d;
+	document.getElementById("n_result").innerHTML = n;
 
 	for (var i = 0, length = opts.length; i < length; i++) {
 		if (opts[i].checked) {
