@@ -115,3 +115,9 @@ function clr() {
 	btn.innerHTML = "DRAW";
 	btn.onclick = draw;
 }
+
+function reset() {
+	d.value = "350";
+	n.value = "12";
+	draw();
+}
