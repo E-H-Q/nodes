@@ -23,6 +23,7 @@ function draw() {
 	btn = document.getElementById("btn");
 	var opts = document.getElementsByName("type");
 	var lines = false;
+	var disp = true;
 
 	document.getElementById("d_result").innerHTML = d;
 	document.getElementById("n_result").innerHTML = n;
@@ -34,6 +35,9 @@ function draw() {
 			}
 			else if (opts[i].value == "lines") {
 				lines = true;
+			}
+			else if (opts[i].value == "disp") {
+				disp = false;
 			}
 		}
 	}
@@ -63,7 +67,9 @@ function draw() {
 		cnv.strokeStyle = "#FFFFFF";
 		if (lines == false) {
 			cnv.arc(x, y, r, 0, 2 * Math.PI, false); // draws the outer circle
-			cnv.stroke();
+			if (disp == true) {
+				cnv.stroke();
+			}
 		}
 
 		//nodes
