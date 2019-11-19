@@ -8,7 +8,7 @@ Made to be testing grounds for a future project of mine that involves dynamicall
 You'll see that project soon enough...
 
 ## Todo:
-- Add "reset" button
+- ~~Add "reset" button~~
 - Add text field inputs to set parameters
 - Add user-set node sizes
 - Add zoom functionalities, (changes node sizes on zoom?)
