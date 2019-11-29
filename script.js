@@ -10,6 +10,10 @@ function isNum(evt) {
 		setTimeout(function() { document.getElementById("error").innerHTML = " "; }, 2500);
 		document.getElementById("error").innerHTML = "Only numbers are allowed";
 		return false;
+	}
+	else if (charCode == 13) {
+		draw();
+		return true;
 	} else {
 		return true;
 	}
