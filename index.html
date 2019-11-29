@@ -27,10 +27,8 @@
 	<body onload="onload()">
 		<h3>- CIRCLE W/ NODES -</h3>
 		<p id="error"></p>
-		<!-- <p>Diameter (px): <input type="text" placeholder="Max: 500" id="d" onkeypress="return isNum(event)"></p> -->
-		<p>Diamter (px): <input type="range" min="1" max="500" value="350" class="slider" id="d" onchange="draw()"><span id="d_result"/></p>
-		<!-- <p># of Nodes: <input type="text" id="n" placeholder="Max: 24" onkeypress="return isNum(event)"></p> -->
-		<p># of Nodes: <input type="range" min="0" max="24" value="12" class="slider" id="n" onchange="draw()"><span id="n_result"/></p>
+		<p>Diamter (px): <input type="range" min="1" max="500" value="350" class="slider" id="d" onchange="draw()"><input type="text" id="d_result" onkeypress="return isNum(event)"/></p>
+		<p># of Nodes: <input type="range" min="0" max="24" value="12" class="slider" id="n" onchange="draw()"><input type="text" id="n_result" onkeypress="return isNum(event)"/></p>
 		Display:<br> 
 		<input type="radio" name="type" value="circle" id="default" onchange="draw()">Circle
 		<input type="radio" name="type" value="lines" onchange="draw()">Lines
