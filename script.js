@@ -3,6 +3,8 @@ function onload() {
 	draw();
 }
 
+var txt = false; // determines whether to use the text-box input, or the slider input
+
 function isNum(evt) {
 	evt = (evt) ? evt : window.event;
 	var charCode = (evt.which) ? evt.which : evt.keyCode;
@@ -12,25 +14,31 @@ function isNum(evt) {
 		return false;
 	}
 	else if (charCode == 13) {
+		txt = true;
 		draw();
-		return true;
 	} else {
 		return true;
 	}
 }
 
 function draw() {
-	clr();
 	var canvas = document.getElementById("circle");
-	var d = document.getElementById("d").value;
-	var n = document.getElementById("n").value;
+	if (txt == false) {
+		var d = document.getElementById("d").value;
+		var n = document.getElementById("n").value;
+		document.getElementById("d_result").value = d;
+		document.getElementById("n_result").value = n;
+	} else {
+		var d = document.getElementById("d_result").value;
+		var n = document.getElementById("n_result").value;
+		document.getElementById("d").value = d_result;
+		document.getElementById("n").value = n_result;
+	}
 	btn = document.getElementById("btn");
 	var opts = document.getElementsByName("type");
 	var lines = false;
 	var disp = true;
-
-	document.getElementById("d_result").value = d;
-	document.getElementById("n_result").value = n;
+	clr();
 
 	for (var i = 0, length = opts.length; i < length; i++) {
 		if (opts[i].checked) {
@@ -110,6 +118,7 @@ function draw() {
 }
 
 function clr() {
+	txt = false;
 	var canvas = document.getElementById("circle");
 	var elements = document.getElementsByClassName("circle");
 	while(elements.length > 0) {
@@ -121,6 +130,7 @@ function clr() {
 }
 
 function reset() {
+	txt = false;
 	d.value = "350";
 	n.value = "12";
 	draw();
