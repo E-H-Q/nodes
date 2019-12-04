@@ -68,8 +68,6 @@ function draw() {
              // (n = # of nodes to draw)
              // 360/n = x
              // place nodes every x degrees
-		btn.innerHTML = "CLEAR";
-		btn.onclick = clr;
 		var cnv = canvas.getContext("2d"); 
 		var x = canvas.width / 2;
 		var y = canvas.height / 2;
@@ -125,8 +123,7 @@ function clr() {
 		elements[0].parentNode.removeChild(elements[0]);
 	}
 	canvas.width = canvas.width;
-	btn.innerHTML = "DRAW";
-	btn.onclick = draw;
+	btn.onclick = reset;
 }
 
 function reset() {
