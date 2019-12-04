@@ -9,6 +9,6 @@ You'll see that project soon enough...
 
 ## Todo:
 - ~~Add "reset" button~~
-- Add text field inputs to set parameters
+- ~~Add text field inputs to set parameters~~
 - Add user-set node sizes
 - Add zoom functionalities, (changes node sizes on zoom?)
