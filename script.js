@@ -23,16 +23,16 @@ function isNum(evt) {
 
 function draw() {
 	var canvas = document.getElementById("circle");
-	if (txt == false) {
+	if (txt == false) { // reads from sliders
 		var d = document.getElementById("d").value;
 		var n = document.getElementById("n").value;
 		document.getElementById("d_result").value = d;
 		document.getElementById("n_result").value = n;
-	} else {
+	} else { // reads from text-input
 		var d = document.getElementById("d_result").value;
 		var n = document.getElementById("n_result").value;
-		document.getElementById("d").value = d_result;
-		document.getElementById("n").value = n_result;
+		document.getElementById("d").value = d;
+		document.getElementById("n").value = n;
 	}
 	btn = document.getElementById("btn");
 	var opts = document.getElementsByName("type");
