@@ -1,6 +1,6 @@
 function onload() {
 	document.getElementById("default").checked = true;
-	draw();
+	reset();
 }
 
 var txt = false; // determines whether to use the text-box input, or the slider input
