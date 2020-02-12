@@ -83,7 +83,8 @@ function draw() {
 		}
 
 		//nodes
-		var size = 20;
+		var size = 20; // changes size of nodes
+		var pos = 0;
 		var circleArray = [];
         var theta = [];
 		var main = document.getElementById("main");
@@ -103,8 +104,14 @@ function draw() {
 			circleArray[i].style.width = size + "px";
 			circleArray[i].style.height = size + "px";
 			circleArray[i].style.backgroundColor = "#FFFFFF";
-			circleArray[i].style.top = ((canvas.height / 2.1) - parseInt(circleArray[i].posy.slice(0, -2))) + "px";
-			circleArray[i].style.left = ((canvas.height / 2.1) + parseInt(circleArray[i].posx.slice(0, -2))) + "px";
+			if (size > 20) {
+				diff = size - 20;
+				pos = 2.1 + 0.05*(diff/10);
+			} else {
+				pos = 2.1;
+			}
+			circleArray[i].style.top = ((canvas.height / pos) - parseInt(circleArray[i].posy.slice(0, -2))) + "px";
+			circleArray[i].style.left = ((canvas.height / pos) + parseInt(circleArray[i].posx.slice(0, -2))) + "px";
 			main.appendChild(circleArray[i]);
 			if (lines == true) {
 				cnv.moveTo(250, y);
