@@ -10,7 +10,7 @@ You'll see that project soon enough...
 ## Todo:
 - ~~Add "reset" button~~
 - ~~Add text field inputs to set parameters~~
-- Add user-set node sizes
+- ~~Add user-set node sizes~~
 - Add zoom functionalities, (changes node sizes on zoom?)
 - Add node "focusing" on click, (centers node in viewport)
 - Add options for "layers" of nodes in a seperate circle, inside the original.
