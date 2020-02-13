@@ -26,13 +26,18 @@ function draw() {
 	if (txt == false) { // reads from sliders
 		var d = document.getElementById("d").value;
 		var n = document.getElementById("n").value;
+		var s = document.getElementById("s").value;
 		document.getElementById("d_result").value = d;
 		document.getElementById("n_result").value = n;
+		document.getElementById("s_result").value = s;
 	} else { // reads from text-input
 		var d = document.getElementById("d_result").value;
 		var n = document.getElementById("n_result").value;
+		var s = document.getElementById("s_result").value;
 		document.getElementById("d").value = d;
 		document.getElementById("n").value = n;
+		document.getElementById("s").value = s;
+		
 	}
 	btn = document.getElementById("btn");
 	var opts = document.getElementsByName("type");
@@ -83,7 +88,7 @@ function draw() {
 		}
 
 		//nodes
-		var size = 20; // changes size of nodes
+		var size = s; // changes size of nodes
 		var pos = 0;
 		var circleArray = [];
         var theta = [];
