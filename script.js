@@ -142,5 +142,6 @@ function reset() {
 	txt = false;
 	d.value = "350";
 	n.value = "12";
+	s.value = "20";
 	draw();
 }
