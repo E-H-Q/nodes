@@ -176,5 +176,7 @@ function reset() {
 	d.value = "350";
 	n.value = "12";
 	s.value = "20";
+	main.style.top = (0) + "px";
+	main.style.left = (0) + "px";
 	draw();
 }
