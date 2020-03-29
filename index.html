@@ -17,9 +17,14 @@
 				border-radius: 50%;
 			}
 			div#main {
+				position: relative;
+			}
+			#container {
 				position: absolute;
+				border: 1px #555555 solid;
+				width: auto;
+				height: auto;
 				left: 30%;
-				border: 1px #555 solid;
 				overflow: hidden;
 				cursor: move;
 			}
@@ -46,9 +51,11 @@
 		<button type="submit" onclick="reset()" id="btn">RESET</button>
 		<br>
 		<br>
-		<div id="main">
-			<canvas id="circle" width="500" height="500">
-			</canvas>
+		<div id="container">
+			<div id="main">
+				<canvas id="circle" width="500" height="500">
+				</canvas>
+			</div>
 		</div>
 		<script type="text/javascript" src="script.js"></script>
 	</body>
