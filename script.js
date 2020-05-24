@@ -144,12 +144,17 @@ function draw() {
 			circleArray[i].style.backgroundColor = "#FFFFFF";
 			if (size > 20) {
 				diff = size - 20;
-				pos = 2.1 + 0.05*(diff/10);
+				pos = 2.1 + 0.05 * (diff/10);
 			} else {
 				pos = 2.1;
 			}
 			circleArray[i].style.top = ((canvas.height / pos) - parseInt(circleArray[i].posy.slice(0, -2))) + "px";
 			circleArray[i].style.left = ((canvas.height / pos) + parseInt(circleArray[i].posx.slice(0, -2))) + "px";
+			
+			// gets the coords of each node
+			console.log("X: " + Math.round(((canvas.height / pos) - parseInt(circleArray[i].posx.slice(0, -2)))) + "\n"
+				+ "Y: " + Math.round(((canvas.height / pos) - parseInt(circleArray[i].posy.slice(0, -2)))));
+			
 			main.appendChild(circleArray[i]);
 			if (lines == true) {
 				cnv.moveTo(250, y);
